@@ -1,0 +1,50 @@
+{
+  "name": "async-debug",
+  "version": "1.0.0",
+  "description": "Asynchronous operation debugger built on top of async_hooks.",
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint src",
+    "fmt": "eslint src --fix",
+    "prepack": "yarn lint && yarn build"
+  },
+  "author": "zero734kr <zero734kr@gmail.com>",
+  "license": "Apache-2.0",
+  "private": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "typings": "./dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js",
+    "types": "./dist/index.d.ts"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "async",
+    "debug",
+    "async_hooks",
+    "performance",
+    "tracing"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zero734kr/async-debug.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zero734kr/async-debug/issues"
+  },
+  "devDependencies": {
+    "@swc/core": "^1.3.10",
+    "@types/node": "^18.11.3",
+    "eslint": "^8.26.0",
+    "eslint-config-neon": "^0.1.39",
+    "tsup": "^6.3.0",
+    "typescript": "^4.8.4"
+  },
+  "engines": {
+    "node": ">=8.5.0"
+  }
+}
