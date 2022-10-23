@@ -84,8 +84,8 @@ export function configure({ longTaskThreshold = 300 }: DebugOptions = {}): Async
                     longTaskThreshold :
                     longTaskThreshold[event.resourceType] ?? 300;
 
-                if (duration > threshold) {
-                    console.warn(`Executing asynchronous task ${asyncId} using ${event.resourceType} took ${duration}ms to complete.`);
+                if (duration >= threshold) {
+                    console.warn(`Executing asynchronous task (asyncId: ${asyncId}) using ${event.resourceType} took ${duration}ms to complete.`);
                 }
             }
 
