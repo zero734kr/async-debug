@@ -14,6 +14,10 @@
 
 Currently, the only feature of this module is to listen for your asynchronous operations and log them to the console if they take too long to complete (considered "slow").
 
+## Limitation
+
+As async_hooks does not provide information about the execution context, this module cannot provide the detailed location of where the operation was started like Python's asyncio. I will try to find a way to do this in the future. If you have any ideas, please let me know.
+
 ## Installation
 
 ```sh-session
@@ -51,7 +55,7 @@ configure({
         HTTPCLIENTREQUEST: 300,
         TCPCONNECTWRAP: 100,
         FSREQCALLBACK: 150,
-        // ...
+        // See https://nodejs.org/api/async_hooks.html#type
     }
 })
 ```
