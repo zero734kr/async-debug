@@ -1,6 +1,6 @@
 {
   "name": "async-debug",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Asynchronous operation debugger built on top of async_hooks.",
   "scripts": {
     "build": "tsup",
